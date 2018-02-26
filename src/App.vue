@@ -5,20 +5,19 @@
 </template>
 
 <script>
-import CourseCollection from './components/CourseCollection'
 
 export default {
   name: 'App',
-  components: { CourseCollection },
+  components: { CourseCollection: 'CourseCollection' },
   data () {
     return {
       courses: [
         { id: 33, name: 'kurs 1', deletable: false },
         { id: 44, name: 'kurs 2', deletable: true }
       ]
-    }
+    };
   }
-}
+};
 </script>
 
 <style>

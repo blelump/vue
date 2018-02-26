@@ -8,12 +8,10 @@
 </template>
 
 <script>
-import CourseRowFunctional from './CourseRowFunctional'
-
 export default {
-  components: { CourseRowFunctional },
+  components: { CourseRowFunctional: 'CourseRowFunctional' },
   props: {
     courses: Array
   }
-}
+};
 </script>

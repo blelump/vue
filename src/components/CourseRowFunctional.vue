@@ -1,41 +1,36 @@
 <script>
-import Deletable from './Deletable'
-
-const CourseInfo = {
-  template: '<td>{{courseName}}</td>',
-  props: {
-    courseName: String
-  }
-}
 
 export default {
-  functional: true,
-  render (createElement, { props }) {
+  props: {
+    course: Object
+  },
+  dependencies: ['Deletable', 'CourseInfo'],
+  render (createElement) {
     const componentContent = [
       createElement(
-        CourseInfo,
-        { props: { courseName: props.course.name } }
+        this.CourseInfo,
+        { props: { courseName: this.$props.course.name } }
       )
-    ]
-    if (props.course.deletable) {
+    ];
+    if (this.$props.course.deletable) {
       componentContent.push(
         createElement(
-          Deletable,
+          this.Deletable,
           {
-            props: { course: props.course },
+            props: { course: this.$props.course },
             on: {
               clicked () {
-                console.log('clack')
+                console.log('clack');
               }
             }
           }
         )
-      )
+      );
     }
     return createElement(
       'tr',
       componentContent
-    )
+    );
   }
-}
+};
 </script>

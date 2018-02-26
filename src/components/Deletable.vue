@@ -10,13 +10,13 @@ export default {
   },
   computed: {
     id () {
-      return this.course.id
+      return this.course.id;
     }
   },
   methods: {
     clicked () {
-      this.$emit('clicked', this.course)
+      this.$emit('clicked', this.course);
     }
   }
-}
+};
 </script>

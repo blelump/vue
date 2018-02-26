@@ -4002,6 +4002,21 @@ istanbul@^0.4.0:
     which "^1.1.1"
     wordwrap "^1.0.0"
 
+jpex-defaults@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/jpex-defaults/-/jpex-defaults-2.0.0.tgz#cfee993bcf704103eb79851a376a41423645601a"
+
+jpex-web@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/jpex-web/-/jpex-web-2.0.0.tgz#978c5ee46244673cdaaf0102fea80810d4fac53b"
+  dependencies:
+    jpex-defaults "^2.0.0"
+    promise-polyfill "^6.0.2"
+
+jpex@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/jpex/-/jpex-2.0.0.tgz#d1c6726d539fde2c169089d7d54af0381241e389"
+
 js-base64@^2.1.9:
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.4.3.tgz#2e545ec2b0f2957f41356510205214e98fad6582"
@@ -5641,6 +5656,10 @@ promise-inflight@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/promise-inflight/-/promise-inflight-1.0.1.tgz#98472870bf228132fcbdd868129bad12c3c029e3"
 
+promise-polyfill@^6.0.2:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/promise-polyfill/-/promise-polyfill-6.1.0.tgz#dfa96943ea9c121fca4de9b5868cb39d3472e057"
+
 promise@^7.0.1:
   version "7.3.1"
   resolved "https://registry.yarnpkg.com/promise/-/promise-7.3.1.tgz#064b72602b18f90f29192b8b1bc418ffd1ebd3bf"
@@ -7223,6 +7242,13 @@ vue-eslint-parser@^2.0.1:
 vue-hot-reload-api@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.0.tgz#97976142405d13d8efae154749e88c4e358cf926"
+
+vue-inject@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/vue-inject/-/vue-inject-2.0.0.tgz#dbdfbb46072fd777a2c08e82ff81cf9a6bebff18"
+  dependencies:
+    jpex "^2.0.0"
+    jpex-web "^2.0.0"
 
 vue-loader@^13.3.0:
   version "13.7.1"
