@@ -14,6 +14,19 @@ req.keys().forEach(function (key) {
     () => component.default
   );
 });
+injector.service(
+  'CourseFetcher',
+  () => {
+    return new Promise((resolve, reject) => {
+      setTimeout(resolve, 2000,
+        [
+          { id: 33, name: 'kurs 1', deletable: false },
+          { id: 44, name: 'kurs 2', deletable: true }
+        ]
+      );
+    });
+  }
+);
 
 Vue.use(
   injector,

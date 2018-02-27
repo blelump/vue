@@ -8,14 +8,24 @@
 
 export default {
   name: 'App',
+  dependencies: ['CourseFetcher'],
   components: { CourseCollection: 'CourseCollection' },
+  beforeMount () {
+    this.fetchCourses();
+  },
   data () {
     return {
-      courses: [
-        { id: 33, name: 'kurs 1', deletable: false },
-        { id: 44, name: 'kurs 2', deletable: true }
-      ]
+      courses: []
     };
+  },
+  methods: {
+    fetchCourses () {
+      this.CourseFetcher.then(
+        (courses) => {
+          this.courses = courses;
+        }
+      );
+    }
   }
 };
 </script>
